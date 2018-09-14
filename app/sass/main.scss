@@ -1,0 +1,21 @@
+.main_page {
+    padding-top: 0.5cm;
+    padding-left: 1cm;
+    padding-right: 1cm;
+
+    .invoice_client {
+        display: flex;
+        .client {
+            width: 50%;
+            padding-right: 16px;
+        }
+    }
+
+    .invoice_head {
+        .invoice_number {
+            font-size: 0.8cm;
+            text-align: center;
+        }
+    }
+
+}
