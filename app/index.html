@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,18 @@
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="main_page">
-        <div class="invoice_client">
+        <div class="clients_description">
             <div class="client">
-                <p>
+                <p class="client__name-bold">
                     ВИКОНАВЕЦ
                 </p>
-                <p class="name">
+                <p class="client__name-bold">
                     Товариство з обмеженою відповідальністю «БАНК КОМ СЕРВІС»
                 </p>
-                <p class="detail">
+                <p class="client__detail">
                     02218, м.Київ, вул. Радужна
                     р/р 26009060835565
                     ПАТ КБ «Приватбанк» м.Київ
@@ -27,50 +29,74 @@
                 </p>
             </div>
             <div class="client">
-                <p>
+                <p class="client__name-bold">
                     ЗАМОВНИК
                 </p>
-                <p class="name">
+                <p class="client__name-bold">
                     Акціонерне Товариство Комерційний Банк «Приватбанк»
                 </p>
-                <p class="detail">
+                <p class="client__detail">
                     01001, м.Київ, вул. Грушевського, 1д
                     Ідентифікаційний код юрид.особи:
                     14360570
                 </p>
             </div>
         </div>
-        <div class="invoice_head">
-            <p class="invoice_number">
+        <div class="invoice">
+            <p class="invoice__number-bold">
                 РАХУНОК-ФАКТУРА №РФ 0802-01/2018/09
             </p>
-            <p class="invoice_date">
+            <p class="invoice__date">
                 від 01 вересня 2018 року
             </p>
-            <p class="invoice_contract">
+            <p class="invoice__contract">
                 за послуги зв&#39;язку згідно договору №0802 від 01.01.2018
             </p>
         </div>
         <div class="invoice_table">
-
+            <table>
+                <thead>
+                    <th class="invoice_table__id">№ <br>п/п</th>
+                    <th class="invoice_table__name">Назва</th>
+                    <th class="invoice_table__mes">Од.</th>
+                    <th class="invoice_table__quantity">Кількість<br>(об&#39;ем, обсяг)</th>
+                    <th class="invoice_table__sum">Сума без ПДВ</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="invoice_table__name-bold">Надання телекомунікаційних послуг за вересень 2018 року</td>
+                        <td>грн.</td>
+                        <td>послуга</td>
+                        <td>59730,00</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         <div class="invoice_tail">
-            <p class="sum_description">
-                Всього на суму:
-            </p>
-            <p class="sum">
-                Сімдесят одна тисяча шістсот сімдесят шість грн. 00 коп.
-            </p>
-            <p class="vat_description">
-                ПДВ:
-            </p>
-            <p class="sum_vat">
-                11946 грн 00 коп..
-            </p>
+            <div class="invoice_tail__sum">
+                <p class="sum_description">
+                    Всього на суму:
+                </p>
+                <p class="sum">
+                    Сімдесят одна тисяча шістсот сімдесят шість грн. 00 коп.
+                </p>
+            </div>
+
+            <div class="invoice_tail__vat">
+                <p class="vat_description">
+                    ПДВ:
+                </p>
+                <p class="sum_vat">
+                    11946 грн 00 коп..
+                </p>
+            </div>
         </div>
-    
-        <div class="executor_signature">
-            Виписав(ла)__________________ Шумський О.А.
+
+        <div class="signature">
+            <p class="signature__executor">
+                Виписав(ла)__________________ Шумський О.А.
+            </p>
         </div>
     </div>
     <div class="detail_page">
@@ -82,4 +108,5 @@
         </div>
     </div>
 </body>
+
 </html>
