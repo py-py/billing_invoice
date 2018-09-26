@@ -11,15 +11,15 @@
 
 <body>
     <div class="main_page">
-        <div class="clients_description">
-            <div class="client">
+        <div class="client">
+            <div class="client__name">
                 <p class="client__name-bold">
                     ВИКОНАВЕЦ
                 </p>
                 <p class="client__name-bold">
                     Товариство з обмеженою відповідальністю «БАНК КОМ СЕРВІС»
                 </p>
-                <p class="client__detail">
+                <p>
                     02218, м.Київ, вул. Радужна
                     р/р 26009060835565
                     ПАТ КБ «Приватбанк» м.Київ
@@ -28,14 +28,14 @@
                     37936196
                 </p>
             </div>
-            <div class="client">
+            <div class="client__name">
                 <p class="client__name-bold">
                     ЗАМОВНИК
                 </p>
                 <p class="client__name-bold">
                     Акціонерне Товариство Комерційний Банк «Приватбанк»
                 </p>
-                <p class="client__detail">
+                <p>
                     01001, м.Київ, вул. Грушевського, 1д
                     Ідентифікаційний код юрид.особи:
                     14360570
@@ -55,44 +55,53 @@
         </div>
         <div class="invoice_table">
             <table>
-                <thead>
-                    <th class="invoice_table__id">№ <br>п/п</th>
-                    <th class="invoice_table__name">Назва</th>
-                    <th class="invoice_table__mes">Од.</th>
-                    <th class="invoice_table__quantity">Кількість<br>(об&#39;ем, обсяг)</th>
-                    <th class="invoice_table__sum">Сума без ПДВ</th>
+                <thead class="invoice_table_head">
+                    <th class="invoice_table_head__id">№ <br>п/п</th>
+                    <th class="invoice_table_head__name">Назва</th>
+                    <th class="invoice_table_head__mes">Од.</th>
+                    <th class="invoice_table_head__quantity">Кількість<br>(об&#39;ем, обсяг)</th>
+                    <th class="invoice_table_head__sum">Сума без ПДВ</th>
                 </thead>
-                <tbody>
-                    <tr>
+                <tbody class="invoice_table_body">
+                    <tr class="invoice_table_body__row">
                         <td>1</td>
-                        <td class="invoice_table__name-bold">Надання телекомунікаційних послуг за вересень 2018 року</td>
+                        <td class="invoice_table_body__row-left">Надання телекомунікаційних послуг за вересень 2018 року</td>
                         <td>грн.</td>
                         <td>послуга</td>
                         <td>59730,00</td>
                     </tr>
                 </tbody>
+                <tfoot class="invoice_table_foot">
+                    <tr class="invoice_table_foot__row">
+                        <td colspan="4" class="invoice_table_foot__row-bold">ПДВ, 20%:</td>
+                        <td>11946,00</td>
+                    </tr>
+                    <tr  class="invoice_table_foot__row">
+                        <td colspan="4" class="invoice_table_foot__row-bold">Всього з ПДВ:</td>
+                        <td>71676,00</td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
         <div class="invoice_tail">
             <div class="invoice_tail__sum">
-                <p class="sum_description">
+                <p>
                     Всього на суму:
                 </p>
-                <p class="sum">
+                <p class="invoice_tail__sum-bold">
                     Сімдесят одна тисяча шістсот сімдесят шість грн. 00 коп.
                 </p>
             </div>
 
-            <div class="invoice_tail__vat">
-                <p class="vat_description">
+            <div class="invoice_tail__sum">
+                <p >
                     ПДВ:
                 </p>
-                <p class="sum_vat">
+                <p class="invoice_tail__sum-bold">
                     11946 грн 00 коп..
                 </p>
             </div>
         </div>
-
         <div class="signature">
             <p class="signature__executor">
                 Виписав(ла)__________________ Шумський О.А.
@@ -101,7 +110,7 @@
     </div>
     <div class="detail_page">
         <div class="detail_head">
-
+            ПРЫВЕТ!
         </div>
         <div class="details">
 

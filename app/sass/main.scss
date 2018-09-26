@@ -6,35 +6,29 @@ $default_font_table: 10pt;
     margin-top: 2pt;
 }
 
-
-@page {
-    size: A4;
-    margin: 0;
-}
-
-@media print {
+@mixin default_body {
     * {
         margin: 0;
         padding: 0;
     }
 
     body {
-        // margin: 0;
         width: 210mm;
         height: 297mm;
+
+        padding-top: 10mm;
+        padding-left: 8mm;
+        padding-right: 8mm;
+        padding-bottom: 8mm;
+
         font-size: $default_font_size;
         font-family: "Times New Roman", Times, serif;
 
         .main_page {
-            padding-top: 10mm;
-            padding-left: 8mm;
-            padding-right: 8mm;
-            padding-bottom: 8mm;
-
-            .clients_description {
+            .client {
                 display: flex;
 
-                .client {
+                &__name {
                     width: 50%;
 
                     &:first-child {
@@ -45,12 +39,11 @@ $default_font_table: 10pt;
                         padding-left: 8mm;
                     }
 
-                    .client__name-bold {
+                    &-bold {
                         font-weight: bold;
                     }
                 }
             }
-
             .invoice {
                 margin-top: 100pt;
                 text-align: center;
@@ -59,13 +52,12 @@ $default_font_table: 10pt;
                     @include default_paragraph;
                 }
 
-                .invoice__number-bold {
+                &__number-bold {
                     font-size: 16pt;
                     text-align: center;
                     font-weight: bold;
                 }
             }
-
             .invoice_table {
                 table {
                     width: 100%;
@@ -74,49 +66,85 @@ $default_font_table: 10pt;
                     border-collapse: collapse;
 
                     font: $default_font_table;
-                    
 
                     th,
                     td {
                         border: 1px solid black;
                         padding: 0 2pt;
                         text-align: center;
+                    }
 
-                        &.invoice_table__row-bold {
-                            text-align: left;
+                    // &.invoice_table__row-bold {
+                    //     text-align: left;
+                    // }
+
+
+                    .invoice_table_head {
+                        &__id {
+                            width: 30pt;
                         }
                     }
 
-                    .invoice_table__id {
-                        width: 30pt;
+                    .invoice_table_body {
+                        &__row {
+                            &-left {
+                                text-align: left;
+                            }
+                        }
+                    }
+
+                    .invoice_table_foot {
+                        &__row {
+                            &-bold {
+                                padding-right: 5pt;
+                                text-align: right;
+                                font-weight: bold;
+
+                            }
+                        }
                     }
                 }
             }
-
             .invoice_tail {
                 p {
                     @include default_paragraph;
                 }
 
-                .invoice_tail__sum {
+                &__sum {
                     p {
-                        display: inline-block;
+                        display: inline;
                     }
-                }
 
-                .invoice_tail__vat {
-                    p {
-                        display: inline-block;
+                    &-bold {
+                        font-weight: bold;
                     }
                 }
             }
-        }
-
-        .signature {
-            .signature__executor {
-                text-align: right;
+            .signature {
+                &__executor {
+                    text-align: right;
+                }
             }
         }
 
     }
+
+    
+
+}
+
+
+body {
+    @include default_body;
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    size: A4;
+    margin: 0;
+    @include default_body;
 }
