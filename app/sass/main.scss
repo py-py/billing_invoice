@@ -74,11 +74,6 @@ $default_font_table: 10pt;
                         text-align: center;
                     }
 
-                    // &.invoice_table__row-bold {
-                    //     text-align: left;
-                    // }
-
-
                     .invoice_table_head {
                         &__id {
                             width: 30pt;
@@ -125,6 +120,76 @@ $default_font_table: 10pt;
                     text-align: right;
                 }
             }
+            page-break-after: always;
+        }
+
+        .detail_page {
+            padding-top: 10mm;
+            padding-left: 4mm;
+            padding-right: 4mm;
+            padding-bottom: 4mm;
+    
+            .detail_head {
+                text-align: center;
+                &__name {
+                    font-weight: bold;
+                }
+            }
+            .details {
+                table {
+                    width: 100%;
+                    margin: 10pt 0 0 0;
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                    font: $default_font_table;
+
+                    tr {
+                        page-break-inside: avoid;
+                    }
+                    thead {
+                        display: table-row-group;
+                    }
+                    tfoot {
+                        display: table-row-group;
+                    }
+    
+                   
+                    th,
+                    td {
+                        border: 1px solid black;
+                        padding: 0 2pt;
+                        text-align: center;
+                    }
+
+                    .invoice_table_head {
+                        &__id {
+                            width: 30pt;
+                        }
+                    }
+
+                    .invoice_table_body {
+                        &__row {
+                            &-left {
+                                text-align: left;
+                            }
+                        }
+                    }
+
+                    .invoice_table_foot {
+                        &__row {
+                            &-bold {
+                                padding-right: 5pt;
+                                text-align: right;
+                                font-weight: bold;
+
+                            }
+                        }
+                    }
+                }
+                
+            }
+            
+            
         }
 
     }
