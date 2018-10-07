@@ -19,7 +19,8 @@ gulp.task('sass', function () {
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
-            baseDir: 'app'
+            baseDir: 'app',
+            index: "certificate_performed.html" // TODO: remove
         },
         notify: false
     });
